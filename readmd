@@ -1,0 +1,17 @@
+const {src,dest,watch,series} = require('gulp');
+
+const sass = require('gulp')(require('sass'));
+
+function buildStyles(){
+    return (
+        src('./app/scss/*')
+        .pipe(sass())
+        .pipe(dest('./app/css/'))
+    );
+}
+
+function watchTask() {
+    watch(['./app/scss/style.scss'],buildStyles);
+}
+
+exports.default = series(buildStyles,watchTask);
