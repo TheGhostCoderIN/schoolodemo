@@ -48,7 +48,7 @@ body {
           align-items: center;
 }
 
-.basicDiv div.trustDiv p {
+.basicDiv div.trustDiv label {
   margin: 5px;
   padding: 2px;
   -webkit-box-flex: 1;
@@ -56,9 +56,9 @@ body {
           flex: 1;
 }
 
-.basicDiv div.trustDiv p span {
+.basicDiv div.trustDiv label span {
   color: white;
-  font-size: larger;
+  font-size: large;
 }
 
 .basicDiv div.trustDiv #trustedSchools {
@@ -151,7 +151,7 @@ header h1 p {
           align-items: center;
 }
 
-header h1 p #logo {
+header h1 p .logo {
   display: block;
   margin: 4px;
   padding: 10px 20px;
@@ -261,15 +261,31 @@ header nav label button:active {
 }
 
 footer {
+  text-align: center;
   background: #666;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 footer .cityInfo {
+  padding: 20px 40px;
   height: 40px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  color: #eee;
 }
 
 footer .socialLinks {
   padding: 20px 40px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -290,28 +306,174 @@ footer .socialLinks h3 {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  color: #ffffff;
+  color: #eee;
   font-size: 32px;
 }
 
 footer .socialLinks a {
   margin: 5px;
   padding: 5px;
-  height: 30px;
-  width: 30px;
-  color: #ffffff;
+  color: #eee;
   font-size: 20px;
 }
 
 footer .socialLinks a img {
-  padding: 7.5px;
+  padding: 5px;
+  height: 44px;
+  width: 44px;
+  fill: black;
 }
 
 footer .socialLinks a img:hover {
-  background-color: #007eb4;
+  background-color: #007eb480;
+}
+
+footer .companyPolicy {
+  padding: 20px 40px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  color: #ffffff;
+}
+
+footer .companyPolicy h1 {
+  margin: 10px auto;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .companyPolicy h1 p {
+  padding: 2px 8px;
+  color: #007eb4;
+  background: white;
+  border-radius: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .companyPolicy h1 p .logo {
+  display: block;
+  margin: 4px;
+  padding: 10px 20px;
+  color: white;
+  font-size: 24px;
+  background: black;
+  border-radius: 50%;
 }
 
 img {
   width: 40px;
+}
+
+@media screen and (max-width: 768px) {
+  .basicDiv .trustDiv {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    font-size: 20px;
+  }
+  header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  header h1 {
+    font-size: 24px;
+  }
+  header nav {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  header nav ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .basicDiv .trustDiv {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    font-size: 20px;
+  }
+  header {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  header h1 {
+    float: left;
+    font-size: 24px;
+  }
+  header nav {
+    background: url(./../images/socialIcons/menuBar.svg) no-repeat 98%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  header nav ul {
+    display: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  header nav ul li {
+    display: block;
+    width: 100%;
+    border-bottom: 2px solid black;
+  }
+  footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  footer .socialLinks {
+    padding: 5px;
+  }
+  footer .socialLinks a img {
+    width: 40px;
+  }
+  footer .companyPolicy {
+    margin-bottom: 10px;
+    padding: 5px;
+  }
+  footer .companyPolicy h1 {
+    font-size: 20px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

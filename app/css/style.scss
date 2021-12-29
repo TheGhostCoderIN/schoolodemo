@@ -17,12 +17,11 @@ body {
     align-items: center;
     width: 100%;
 
-    
     color: white;
     font-size: 22px;
     font-weight: 700;
     background: black;
-    div.trustDiv{
+    div.trustDiv {
         margin: 5px;
         padding: 5px 5px;
         flex: 7;
@@ -30,52 +29,50 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
-        p {
+        label {
             margin: 5px;
             padding: 2px;
             flex: 1;
             // color: rgb(21, 255, 0);
-            
+
             span {
                 color: white;
-                font-size: larger;
+                font-size: large;
             }
         }
 
-        #trustedSchools{
+        #trustedSchools {
             color: #00bfffd0;
             // color: #0000ffd0;
         }
 
-        #trustedStudents{
+        #trustedStudents {
             color: #00ff00d0;
         }
 
-        #trustedParents{
+        #trustedParents {
             // color: #FFC0CB;
             // or
             color: #f33ff3d0;
         }
-
     }
-    div.searchLang{
+    div.searchLang {
         display: flex;
         flex-direction: row;
         flex: 3;
-        input{
+        input {
             margin: 0px 5px;
             padding: 5px;
             flex: 1;
-    
+
             display: block;
         }
-        label{
+        label {
             margin: 0px 10px;
             padding: 2px 5px;
             flex: 3;
             float: right;
         }
-
     }
 }
 
@@ -103,7 +100,7 @@ header {
             display: flex;
             justify-content: space-evenly;
             align-items: center;
-            #logo {
+            .logo {
                 display: block;
                 margin: 4px;
                 padding: 10px 20px;
@@ -114,6 +111,7 @@ header {
             }
         }
     }
+
     nav {
         flex: 2;
 
@@ -143,7 +141,7 @@ header {
                     color: rgb(70, 218, 12);
                     // background: rgb(35, 109, 6);
                 }
-                a:active{
+                a:active {
                     background-color: rgb(70, 218, 12);
                     color: rgb(35, 109, 6);
                 }
@@ -154,7 +152,7 @@ header {
                 color: rgb(70, 218, 12);
                 // background: rgb(35, 109, 6);
             }
-            li:active{
+            li:active {
                 background-color: rgb(70, 218, 12);
                 color: rgb(35, 109, 6);
             }
@@ -173,7 +171,7 @@ header {
                 font-weight: 600;
                 background: white;
                 outline: 2px solid white;
-                border:none;
+                border: none;
                 border-radius: 6px;
             }
             button:hover {
@@ -183,7 +181,7 @@ header {
                 cursor: pointer;
             }
 
-            button:active{
+            button:active {
                 background: #9cced64f;
             }
         }
@@ -194,12 +192,23 @@ header {
     height: 100vh;
 }
 footer {
+    text-align: center;
+
     background: #666;
+    display: flex;
+    flex-direction: row;
+
     .cityInfo {
+        padding: 20px 40px;
         height: 40px;
+        flex: 1;
+
+        color: #eee;
     }
+
     .socialLinks {
         padding: 20px 40px;
+        flex: 1;
 
         display: flex;
         justify-content: center;
@@ -208,22 +217,58 @@ footer {
         h3 {
             margin: 5px;
             flex: 1;
-            color: #ffffff;
+            color: #eee;
             font-size: 32px;
         }
+
         a {
             margin: 5px;
             padding: 5px;
-            height: 30px;
-            width: 30px;
 
-            color: #ffffff;
+            color: #eee;
             font-size: 20px;
             img {
-                padding: 7.5px;
+                padding: 5px;
+                height: 44px;
+                width: 44px;
+                fill: black;
             }
             img:hover {
-                background-color: #007eb4;
+                background-color: #007eb480;
+            }
+        }
+    }
+
+    .companyPolicy {
+        padding: 20px 40px;
+        flex: 1;
+
+        color: #ffffff;
+        h1 {
+            margin: 10px auto;
+            flex: 1;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            p {
+                padding: 2px 8px;
+                color: #007eb4;
+                background: white;
+                border-radius: 4px;
+
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                .logo {
+                    display: block;
+                    margin: 4px;
+                    padding: 10px 20px;
+                    color: white;
+                    font-size: 24px;
+                    background: black;
+                    border-radius: 50%;
+                }
             }
         }
     }
@@ -232,4 +277,81 @@ footer {
 // added for images cause they are gonnaa take size
 img {
     width: 40px;
+}
+
+// media queries for the web pages
+//for tablets at 768px
+@media screen and (max-width: 768px) {
+    .basicDiv {
+        .trustDiv {
+            flex-direction: column;
+            font-size: 20px;
+        }
+    }
+    header {
+        flex-direction: column;
+        h1 {
+            font-size: 24px;
+        }
+        nav {
+            flex-direction: column;
+            ul {
+                flex-direction: column;
+            }
+        }
+    }
+    footer {
+        flex-direction: column;
+    }
+}
+
+//media queries at 480 px
+
+@media screen and (max-width: 768px) {
+    .basicDiv {
+        .trustDiv {
+            flex-direction: column;
+            font-size: 20px;
+        }
+    }
+    header {
+        flex-direction: row;
+        h1 {
+            float: left;
+            font-size: 24px;
+        }
+        nav {
+
+            background: url(./../images/socialIcons/menuBar.svg) no-repeat 98% ;
+            flex-direction: column-reverse;
+            ul {
+                display: none;
+                flex-direction: column;
+                li{
+                    display: block;
+                    width: 100%;
+                    border-bottom: 2px solid black;
+                }
+            }
+        }
+    }
+    footer {
+        flex-direction: column;
+        .socialLinks {
+            padding: 5px;
+            a {
+                img {
+                    width: 40px;
+                }
+            }
+        }
+
+        .companyPolicy {
+            margin-bottom: 10px;
+            padding: 5px;
+            h1{
+                font-size: 20px;
+            }
+        }
+    }
 }
